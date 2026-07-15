@@ -3,7 +3,7 @@
 :root{
 
 --hue: 255;
---first-color: hsl(var(--hue), 60%, 64%);
+--first-color: hsl(var(--hue) , 60% , 64% );
 --first-color-alt: hsl(var(--hue), 80%, 56%);
 --first-color-alt-2: hsl(var(--hue), 60%, 56%);
 --first-color-light: hsl(var(--hue), 60%, 74%);
@@ -108,7 +108,26 @@ body {
    }
    /*===============BLOB============*/
    /*Blob animate*/
-
+.blob-animate{
+ width: 100px;  
+ height: 100px;
+ background: linear-gradient(180deg,
+        var(--first-color-alt) 20%,
+        var(--first-color-light) 100%   );
+        border-radius: 50%;
+        position: absolute;
+        filter: blur(35px);
+        z-index: -1;
+        animation: animateBlob 5s linear infinite;
+}
+@keyframes animateBlob{
+   0%{
+    transform: rotate(0);
+   } 
+    100%{
+    transform: rotate(360deg);
+   } 
+}
 
    /* blob*/ 
    /*========================CUSTOM CURSOR================*/
@@ -127,13 +146,44 @@ body {
     hsla(240,100%,2%,0)100% );
    z-index: var(--z-fixed); 
 }
+
+.header .blob-animate{
+    top: -3rem;
+    left: -3rem;
+
+}
+
 .nav{
     display: flex;
     justify-content: space-between;
     padding-block: 1rem;
 }
+.nav__logo{
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    align-self: flex-start;
+    transition: color 0.4s;
+}
+.nav__logo:hover{
+    color: var(--first-color);
 
-
+}
+.nav__list{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: .5rem;
+}
+.nav__link{
+    color: var(--title-color);
+    font: var(--font-semi-bold) var(--small-font-size) var(--second-font);
+    transition: color 0.4s , text-shadow 0.4s;
+}
+.nav__link:hover{
+    color: var(--first-color);
+    text-shadow: 0 8px 16px var(--first-color);
+}
    /* active link */
 
 
@@ -148,3 +198,35 @@ body {
 
 
 /*===================== PROJECTS=============*/
+
+
+/*swiper class*/
+/*===================work=========================*/
+/* show & hide sections*/
+/*active tab*/
+/*===================servises=========================*/
+/*hide services info*/
+/* rotate icon*/
+/*===================testimonials=========================*/
+/* infinate scroll animation*/
+/*=====================contact=============*/
+
+/*===================== FOOTER=============*/
+
+/*===================== SCROLL BAR=============*/
+
+/*=====================BREAKPOINT=============*/
+/* For small devices */
+@media screen and (max-width: 320px){
+ .container{
+     margin-inline : 1rem;
+ }
+}
+
+/* For medium devices */
+
+/* For large devices */
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+
+/* Custom cursor is hidden for mobile devices */
