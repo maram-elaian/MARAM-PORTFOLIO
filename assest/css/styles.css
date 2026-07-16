@@ -226,6 +226,26 @@ body {
 /* For medium devices */
 
 /* For large devices */
+@media screen and (min-width: 1150px){
+  .container{
+    margin-inline: auto;
+  }
+
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+    align-items: center;
+  }
+
+  .nav__logo{
+    align-self: initial;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    column-gap: 5.5rem;
+  }
+}
+
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
 
