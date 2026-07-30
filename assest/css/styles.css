@@ -811,7 +811,7 @@ rotate:-180deg ;
 /*=====================BREAKPOINT=============*/
 /* For small devices */
 /* For small devices */
-@media screen and (max-width: 320px){
+@media screen and (max-width: 380px){
   :root{
     --biggest-font-size: 1.5rem;
     --bigger-font-size: 1.35rem;
